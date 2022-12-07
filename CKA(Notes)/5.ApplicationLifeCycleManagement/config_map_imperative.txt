@@ -1,0 +1,1 @@
+kubectl create configmap webapp-config-amp --from-literal=APP_COLOR=darkblueconfigmap/webapp-config-amp created

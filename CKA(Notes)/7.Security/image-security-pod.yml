@@ -1,0 +1,17 @@
+apiVersion: v1 
+kind: Pod
+metadata:
+   name: nginx 
+spec: 
+   Containers:
+   - name: nginx
+     image: private-registery/app/internel-app/
+   imagePullSecret: 
+   - name: regcred 
+
+
+#kubectl create secret docker-registry regcred \
+# --docker-server=pirvate-registry.io \ 
+# --docker-username=docker-user \ 
+# --docker-password=registry-password \
+# --docker-emal= registry-user@org.com

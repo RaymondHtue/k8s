@@ -1,0 +1,10 @@
+apiVersion: v1 
+kind: PersistentVolume
+metadata:
+   name: pv-vol1 
+spec: 
+   capacity: 
+      storage: 1Gi 
+   awsElasticBlockStore:
+      vloumeID: <vol-id>
+      fsType: ext4 

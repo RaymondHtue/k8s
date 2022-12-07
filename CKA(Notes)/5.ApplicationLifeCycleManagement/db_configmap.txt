@@ -1,0 +1,22 @@
+kubectl describe configmaps db-config 
+Name:         db-config
+Namespace:    default
+Labels:       <none>
+Annotations:  <none>
+
+Data
+====
+DB_HOST:
+----
+SQL01.example.com
+DB_NAME:
+----
+SQL01
+DB_PORT:
+----
+3306
+
+BinaryData
+====
+
+Events:  <none>

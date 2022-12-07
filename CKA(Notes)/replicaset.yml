@@ -1,0 +1,21 @@
+#kubectl explain replicaset | grep VERSION
+#cat replicaset-definition-2.yaml 
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replicaset-2
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        tier: frontend
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+
+#kubectl scale replicaset new-replica-set --replicas=2

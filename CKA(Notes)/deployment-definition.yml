@@ -1,0 +1,33 @@
+apiversion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+  lables:
+    app: myapp 
+    type: fornt-end
+spec: 
+  template:
+    metadata:
+      name: nginx-2
+      lables:
+        app: myapp
+        type: front-end
+    spec: 
+      containers:
+        - name: nginx-container
+          image: nginx
+  replicas: 3
+  selector:
+    matchLables:
+      type: fornt-end
+      app: myapp
+
+#kubectl create -f deployment-difinition.yml
+#kubectl get deployments
+#kubectl get replicaset
+#kubectl get pods
+#kubectl get all
+
+#deployment create automatically replicaset
+ 
+    

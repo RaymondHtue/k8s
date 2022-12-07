@@ -1,0 +1,4 @@
+#You are requested to make the new application available at /pay.
+#Identify and implement the best approach to making this application available on the ingress controller and test to make sure its working. Look into annotations: rewrite-target as well.
+
+

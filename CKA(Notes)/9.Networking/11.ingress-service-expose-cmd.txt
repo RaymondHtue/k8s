@@ -1,0 +1,21 @@
+1. Create Ingress Controller
+2.Create Ingress Service 
+3. Create Ingress rules
+
+2. 
+
+k expose deployment <ingress-controller> -n <name-space> --name ingress --port=80 --targetport=80 --nodeport=30080  --type=nodeport
+
+
+3. 
+
+-- no need to same app and ingress name-space 
+
+k get svc in app-space 
+
+k create ingress ingress-wear-watch -n app-space --rule="/wear=wear-service:8080" --rule="/watch=video-service:8080" 
+
+### to to edit rewrite annotations in yaml file 
+
+nginx.ingress.kubernetes.io/rewrite-target: /
+ginx.ingress.kubernetes.io/ssl-redirect: "false"
